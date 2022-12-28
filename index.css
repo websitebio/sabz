@@ -5,15 +5,15 @@
 }
 
 html {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,173,208,1) 100%);
-  );
+  background: rgb(0,208,167);
+  background: linear-gradient(90deg, rgba(0,208,167,1) 0%, rgba(2,15,46,1) 11%, rgba(1,53,70,1) 58%, rgba(2,0,36,1) 75%, rgba(0,208,167,1) 100%);
   overflow: hidden
   scroll-behavior: smooth;
   /* Create the parallax scrolling effect */
   color-scheme: dark;
 }
 
+/* Default styles for all viewports */
 .nav-bar {
   position: absolute;
   width: 100vw;
@@ -29,6 +29,13 @@ html {
   gap: 3rem;
   display: flex;
   flex-direction: row;
+}
+
+/* Styles to apply when the viewport is less than 600px wide */
+@media (max-width: 600px) {
+  .nav-bar {
+    display: none;
+  }
 }
 
 .nav-link {
@@ -91,7 +98,7 @@ html {
   background-color: #191a1c;
   font-family: Product Sans;
   font-size: 1.8rem;
-  color: white;
+ color: white;
   width: max(50vw, 300px);
   padding: 2rem;
   border-radius: 0.5rem;
@@ -136,86 +143,130 @@ html {
 .timeline__component--bg {
   padding: 1.5em;
   background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* LEAVE TILL LAST */
-.timeline__component--bottom {
-  margin-bottom: 0;
+.timeline__component--title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
 }
 
-.timeline__middle {
-  position: relative;
-  background: #ffffff;
+.timeline__component--years {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
 }
 
-.timeline__point {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 15px;
-  height: 15px;
-  background: #ffffff;
+.timeline__component--description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.title.skills {
+  font-size: 3rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding-top: 4rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-paragraph {
+  background-color: #191a1c;
+  font-family: Product Sans;
+  font-size: 1.4rem;
+  color: white;
+  width: max(40vw, 300px);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+}
+
+.skills-list li span {
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.skills-list li img {
+  height: 1.5rem;
+}
+
+.skills-list li.html img {
+  width: 2rem;
+}
+
+.skills-list li.css img {
+  width: 2.5rem;
+}
+
+.skills-list li.javascript img {
+  width: 3rem;
+}
+
+.skills-list li.react img {
+  width: 3.5rem;
+}
+
+.skills-list li.node img {
+  width: 2.5rem;
+}
+
+.skills-list li.express img {
+  width: 3.5rem;
+}
+
+.skills-list li.mongodb img {
+  width: 3.5rem;
+}
+
+.title.contact {
+  font-size: 3rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.contact-card img {
+  width: max(10vw, 64px);
+  height: max(10vw, 64px);
   border-radius: 50%;
 }
 
-/* LEAVE TILL LAST */
-.timeline__point--bottom {
-  top: initial;
-  bottom: 0;
-}
-
-.timeline__date--right {
-  text-align: right;
-}
-
-.timeline__title {
-  margin: 0;
-  font-size: 1.15em;
-  font-weight: bold;
-}
-
-.timeline__paragraph {
-  line-height: 1.5;
-}
-
-.fcf-body {
-    font-family: Product Sans;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #0000ff;
-    text-align: centre;
-}
-
-.fcf-label {
-    font-family: Product Sans;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #0000ff;
-    text-align: centre;
-}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #5DADE2;
+.contact-card .contact-info {
+  margin-top: 2rem;
+  background-color: #191a1c;
+  font-family: Product Sans;
+  font-size: 1.4rem;
   color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
+  width: max(40vw, 300px);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-a {
-  cursor: pointer;
+.contact-card .contact-info a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact-card .contact-info img {
+  width: max(4vw, 32px);
+  height: max(4vw, 32px);
+  margin-bottom: 0.5rem;
 }
