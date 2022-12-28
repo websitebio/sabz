@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,173,208,1) 100%);
+  );
+  overflow: hidden
+  scroll-behavior: smooth;
+  /* Create the parallax scrolling effect */
+  color-scheme: dark;
+}
+
+.nav-bar {
+  position: absolute;
+  width: 100vw;
+  padding: max(6vw, 4rem) max(10vw, 4rem);
+  z-index: 4;
+}
+
+.nav-bar-list {
+  list-style: none;
+  border-color: #3398db;
+  border-width: 1.5rem;
+  border-radius: 0.5rem;
+  gap: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link {
+  font-family: Product Sans;
+  text-decoration: none;
+  font-size: max(2vw, 1.1rem);
+
+  background: linear-gradient(156deg, #3398db, #a463bf);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  padding: max(10vw, 6rem);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.title {
+  font-family: Product Sans;
+  background: linear-gradient(156deg, #a463bf, #3398db);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title.name {
+  font-size: max(4.8vw, 2.8rem);
+}
+
+.title.profession {
+  font-size: max(3.8vw, 1.8rem);
+  font-style: italic;
+}
+
+.link-icon {
+  width: max(4vw, 32px);
+}
+
+.title.about {
+  font-size: 3rem;
+}
+
+.title.projects {
+  font-size: 3rem;
+}
+
+.about-card .about-paragraph {
+  margin-top: 2rem;
+  background-color: #191a1c;
+  font-family: Product Sans;
+  font-size: 1.8rem;
+  color: white;
+  width: max(50vw, 300px);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.title.experience {
+  font-size: 3rem;
+}
+
+.experience-list {
+  list-style: none;
+  padding-top: 4rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-paragraph {
+  background-color: #191a1c;
+  font-family: Product Sans;
+  font-size: 1.4rem;
+  color: white;
+  width: max(40vw, 300px);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.timeline {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 3px 1fr;
+  font-family: Product Sans;
+  color: #ffffff;
+}
+
+.timeline__component {
+  margin: 0 20px 20px 20px;
+}
+
+.timeline__component--bg {
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* LEAVE TILL LAST */
+.timeline__component--bottom {
+  margin-bottom: 0;
+}
+
+.timeline__middle {
+  position: relative;
+  background: #ffffff;
+}
+
+.timeline__point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/* LEAVE TILL LAST */
+.timeline__point--bottom {
+  top: initial;
+  bottom: 0;
+}
+
+.timeline__date--right {
+  text-align: right;
+}
+
+.timeline__title {
+  margin: 0;
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
+.timeline__paragraph {
+  line-height: 1.5;
+}
+
+.fcf-body {
+    font-family: Product Sans;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #0000ff;
+    text-align: centre;
+}
+
+.fcf-label {
+    font-family: Product Sans;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #0000ff;
+    text-align: centre;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #5DADE2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+a {
+  cursor: pointer;
+}
