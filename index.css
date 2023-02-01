@@ -108,7 +108,7 @@ html {
   font-size: 3rem;
 }
 
-.experience-list {
+.experience-card .experience-list {
   list-style: none;
   padding-top: 4rem;
   gap: 2rem;
